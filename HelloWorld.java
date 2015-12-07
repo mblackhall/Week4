@@ -9,7 +9,14 @@ public class HelloWorld {
             }
 
             System.out.println("Hello " + args[0]);
+            int lastSquare = 10;
+
        }
+
+
+
+
+
 
 
 }
