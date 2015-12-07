@@ -1,3 +1,5 @@
+package com.marcus.hello;
+
 public class HelloWorld {
 
        public static void main( String args [] ) {
@@ -12,10 +14,6 @@ public class HelloWorld {
             int lastSquare = 10;
 
        }
-
-
-
-
 
 
 
