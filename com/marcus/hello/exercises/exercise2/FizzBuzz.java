@@ -1,7 +1,7 @@
-package com.marcus.hello.exercises;
+package com.marcus.hello.exercises.exercise2;
 
 /**
- * @author marcu
+ * @author marcus
  *         if int divisble by 3  only print 'Fizz'
  *         If int dicisible by 5 only print 'Buzz'
  *         if int divisible by 3 and 5 print FizzBuzz

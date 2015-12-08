@@ -1,4 +1,4 @@
-package com.marcus.hello.exercises;
+package com.marcus.hello.exercises.exercise2;
 
 import junit.framework.TestCase;
 
