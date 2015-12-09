@@ -12,7 +12,6 @@ public class FactorialTest extends TestCase {
         assertEquals(1,Factorial.factorial(0));
         assertEquals(1,Factorial.factorial(1));
         assertEquals(-1,Factorial.factorial(-5));
-
         assertEquals(6,Factorial.factorial(3));
         assertEquals(120,Factorial.factorial(5));
 
@@ -27,4 +26,7 @@ public class FactorialTest extends TestCase {
         assertEquals(120,Factorial.recursiveFactorial(5));
 
     }
+
+
+
 }
