@@ -8,7 +8,8 @@ import junit.framework.TestCase;
 public class FactorialTest extends TestCase {
 
     public void testFactorial()  {
-
+Number n;
+        Integer i;
         assertEquals(1,Factorial.factorial(0));
         assertEquals(1,Factorial.factorial(1));
         assertEquals(-1,Factorial.factorial(-5));
