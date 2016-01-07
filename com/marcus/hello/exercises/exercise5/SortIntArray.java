@@ -20,6 +20,7 @@ public class SortIntArray {
         Arrays.sort(salary2);
         sortIntArray.printArray(salary2);
 
+
     }
 
     private static void sortInts( int[] salary) {

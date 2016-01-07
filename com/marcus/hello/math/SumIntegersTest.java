@@ -7,7 +7,7 @@ import junit.framework.TestCase;
  */
 public class SumIntegersTest extends TestCase {
 
-    public void testMain() throws Exception {
-
+    public void testSumIsCorrect()  {
+        assertEquals(18,SumIntegers.sumIntegers(5,6,7));
     }
 }

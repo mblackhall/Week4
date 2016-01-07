@@ -5,10 +5,10 @@ package com.marcus.hello.utils;
  */
 public class StringUtils {
 
-    private StringUtils(){};
 
-    public static boolean isEmpty(String string ){
 
-        return string == null || string.isEmpty();
+    public static boolean isEmpty(CharSequence cs ){
+
+        return cs == null || cs.length() == 0;
     }
 }
