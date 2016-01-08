@@ -7,39 +7,38 @@ import junit.framework.TestCase;
  */
 public class FizzBuzzTest extends TestCase {
 
-    private FizzBuzz fizzBuzz = new FizzBuzz();
-    protected void setUp(){
+    private FizzBuzz fizzBuzz ;
+
+    protected void setUp() {
         fizzBuzz = new FizzBuzz();
+    }
+
+    public void testFizzBuzzShouldBeFizz() {
+
+        assertEquals("Fizz", fizzBuzz.getFizzBuzz(9));
+        assertEquals("Fizz", fizzBuzz.getFizzBuzz(99));
 
     }
 
-    public void testFizzBuzzShouldBeFizz() throws Exception {
+    public void testFizzBuzzShouldBeBuzz() {
 
-        assertEquals("Fizz",fizzBuzz.getFizzBuzz(9));
-        assertEquals("Fizz",fizzBuzz.getFizzBuzz(99));
+        assertEquals("Buzz", fizzBuzz.getFizzBuzz(5));
+        assertEquals("Buzz", fizzBuzz.getFizzBuzz(20));
+
+    }
+
+    public void testFizzBuzzShouldBeFizzBuzz() {
+
+        assertEquals("FizzBuzz", fizzBuzz.getFizzBuzz(15));
+        assertEquals("FizzBuzz", fizzBuzz.getFizzBuzz(30));
 
 
     }
 
-    public void testFizzBuzzShouldBeBuzz()  {
+    public void testFizzBuzzShouldBeNumber() {
 
-        assertEquals("Buzz",fizzBuzz.getFizzBuzz(5));
-        assertEquals("Buzz",fizzBuzz.getFizzBuzz(20));
-
-    }
-
-    public void testFizzBuzzShouldBeFizzBuzz()  {
-
-        assertEquals("FizzBuzz",fizzBuzz.getFizzBuzz(15));
-        assertEquals("FizzBuzz",fizzBuzz.getFizzBuzz(30));
-
-
-    }
-
-    public void testFizzBuzzShouldBeNumber()  {
-
-        assertEquals("4",fizzBuzz.getFizzBuzz(4));
-        assertEquals("98",fizzBuzz.getFizzBuzz(98));
+        assertEquals("4", fizzBuzz.getFizzBuzz(4));
+        assertEquals("98", fizzBuzz.getFizzBuzz(98));
 
 
     }

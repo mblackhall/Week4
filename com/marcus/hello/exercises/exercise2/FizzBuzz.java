@@ -7,13 +7,11 @@ package com.marcus.hello.exercises.exercise2;
  *         if int divisible by 3 and 5 print FizzBuzz
  *         otherwise print int
  */
-public class FizzBuzz {
+public final class FizzBuzz {
 
     private static final String FIZZ = "Fizz";
     private static final String BUZZ = "Buzz";
-
     private static StringBuilder sb = new StringBuilder();
-
 
     public static void main(String[] args) {
 
@@ -25,6 +23,7 @@ public class FizzBuzz {
     }
 
     public String getFizzBuzz(int number) {
+
         sb.setLength(0);
         if (number % 3 == 0) {
             sb.append(FIZZ);
