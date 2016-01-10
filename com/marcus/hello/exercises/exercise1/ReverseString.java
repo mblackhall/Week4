@@ -32,6 +32,7 @@ import com.marcus.hello.utils.StringUtils;
         for (String stringToReverse : args) {
             System.out.println("\nReversing string ... " + stringToReverse);
             reverseString(stringToReverse);
+
         }
 
     }

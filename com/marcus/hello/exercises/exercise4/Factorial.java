@@ -7,6 +7,7 @@ package com.marcus.hello.exercises.exercise4;
  */
 public class Factorial {
 
+
     /**
      *
      * @param n - must be >= 0
@@ -14,14 +15,10 @@ public class Factorial {
      */
     public static int factorial (int n){
 
-        if ( n < 0){
-            return -1;
-        }
+        if ( n < 0) return -1;
 
         int factorial =1;
-        if ( n <= 1 ){
-            return 1 ;
-        }
+        if ( n <= 1 ) return 1;
 
         for (int i = 2 ; i <= n; i++  ){
             factorial *= i;
@@ -40,8 +37,7 @@ public class Factorial {
             return 1;
         }
 
-        int factorial = n * recursiveFactorial(n-1);
-        return factorial;
+        return  n * recursiveFactorial(n-1);
 
     }
 

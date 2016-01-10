@@ -13,8 +13,9 @@ public class SwitchControl {
 
     }
 
+
     public static String convertMonthToString(int month){
-        String strMonth = "";
+        String strMonth ;
         switch (month) {
 
             case 1 :

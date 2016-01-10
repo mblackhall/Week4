@@ -1,24 +1,26 @@
 package com.marcus.hello.exercises.exercise5;
 
+import com.marcus.hello.model.Student;
+
 import java.util.Arrays;
 
 /**
  * @author marcus
  */
-public class SortIntArray {
+public class SortUtils {
 
 
     public static void main(String[] args) {
 
-        SortIntArray sortIntArray = new SortIntArray();
+        SortUtils sortUtils = new SortUtils();
 
         int[] salary = {1000, 500, 400, 200, 2000};
         sortInts(salary);
-        sortIntArray.printArray(salary);
+        sortUtils.printArray(salary);
 
         int [] salary2 = {4000, 300, 400, 100, 5000};
         Arrays.sort(salary2);
-        sortIntArray.printArray(salary2);
+        sortUtils.printArray(salary2);
 
 
     }
@@ -34,6 +36,25 @@ public class SortIntArray {
                     temp = salary[i];
                     salary[i] = salary[i + 1];
                     salary[i + 1] = temp;
+                    sorted = false;
+                }
+            }
+
+        }
+
+    }
+
+    public static void sortStudents(Student[] students){
+
+        boolean sorted = false;
+        Student temp;
+        while (!sorted) {
+            sorted = true;
+            for (int i = 0; i < students.length - 1; i++) {
+                if (students[i].getScore() > students[i+1].getScore()) {
+                    temp = students[i];
+                    students[i] = students[i + 1];
+                    students[i + 1] = temp;
                     sorted = false;
                 }
             }
