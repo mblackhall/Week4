@@ -10,6 +10,14 @@ public class JavaArrays {
 
     public static void main(String[] args) {
 
+
+        String [] names = {"Tom cobbly","Ruud Bloem"};
+        for (String name : names ){
+
+            System.out.println(name);
+        }
+
+
         int i = 0;
         // ternary
 
@@ -18,6 +26,8 @@ public class JavaArrays {
         int[][] points = new int[5][];
         points[0] = new int[]{11, 5, 4};
         points[1] = new int[]{5, 4};
+
+
 
         int bb[][] = new int[5][];
 

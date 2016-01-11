@@ -26,7 +26,7 @@ public class StudentExamScores {
     }
 
 
-    public void reportStudentScores(Student[] students) {
+    public void reportStudentScores() {
 
         SortUtils.sortStudents(students);
 
@@ -42,7 +42,7 @@ public class StudentExamScores {
 
     public static void main(String[] args) {
         StudentExamScores studentExamScores = new StudentExamScores();
-        studentExamScores.reportStudentScores(studentExamScores.students);
+        studentExamScores.reportStudentScores();
 
     }
 

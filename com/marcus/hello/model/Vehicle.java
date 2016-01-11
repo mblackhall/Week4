@@ -6,5 +6,7 @@ package com.marcus.hello.model;
 public class Vehicle {
 
 
-
+     public void start(){
+         System.out.println("unknown");
+     }
 }
