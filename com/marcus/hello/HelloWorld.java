@@ -2,6 +2,10 @@ package com.marcus.hello;
 
 public class HelloWorld {
 
+    interface HelloWorldGreeter {
+            void greet(String message);
+    }
+
     public static void main(String... args) {
 
         if ( args.length == 0) {
@@ -17,9 +21,20 @@ public class HelloWorld {
 
     private void printArguments(String... args) {
 
-        System.out.print("Hello ..." );
-        for (String argument : args) {
-            System.out.print(" " + argument);
+      final int i ;
+        i =5;
+        final String h = "aa";
+
+        for (final String argument : args) {
+
+            new HelloWorldGreeter() {
+
+
+                @Override
+                public void greet(String message) {
+                    System.out.println("Hello " + argument + ":" +  message);
+                }
+            }.greet(argument);
         }
 
     }

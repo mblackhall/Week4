@@ -5,8 +5,19 @@ package com.marcus.hello.model;
  */
 public class Vehicle {
 
+    private float speed;
 
-     public  void start(){
-         System.out.println("unknown");
-     }
+
+    public void brake() {
+    }
+
+    public void accelerate() {
+
+    }
+
+    public float getSpeed() {
+        return speed;
+    }
+
+
 }

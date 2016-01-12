@@ -11,23 +11,26 @@ public class SwitchControl {
         System.out.println(convertMonthToString(2));
         System.out.println(convertMonthToString(14));
 
+
     }
 
 
-    public static String convertMonthToString(int month){
-        String strMonth ;
-        switch (month) {
+    public static String convertMonthToString(int month) {
 
-            case 1 :
+        String strMonth;
+        switch (month) {
+            default:
+                strMonth = "Invalid month";
+                break;
+
+            case 1:
                 strMonth = "januari";
                 break;
 
-            case 2 :
+            case 2:
                 strMonth = "februari";
-                break;
 
-            default :
-                strMonth = "Invalid month";
+
         }
 
         return strMonth;
