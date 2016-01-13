@@ -1,5 +1,6 @@
 package com.marcus.hello.exercises.exercise5;
 
+import com.marcus.hello.model.ComparableStudent;
 import com.marcus.hello.model.Student;
 
 import java.util.Arrays;
@@ -47,11 +48,33 @@ public class SortUtils {
     public static void sortStudents(Student[] students){
 
         boolean sorted = false;
+        int lastButOneIndex = students.length -1;
+        Student temp;
+        while (!sorted) {
+            sorted = true;
+            for (int i = 0; i < lastButOneIndex; i++) {
+                if (students[i].getScore() > students[i+1].getScore()) {
+                    temp = students[i];
+                    students[i] = students[i + 1];
+                    students[i + 1] = temp;
+                    sorted = false;
+                }
+            }
+
+        }
+
+
+
+    }
+
+    public static void sortStudents(Student[] students, ComparableStudent compare){
+
+        boolean sorted = false;
         Student temp;
         while (!sorted) {
             sorted = true;
             for (int i = 0; i < students.length - 1; i++) {
-                if (students[i].getScore() > students[i+1].getScore()) {
+                if ( compare.compareStudent(students[i],students[i+1]) > 0 ) {
                     temp = students[i];
                     students[i] = students[i + 1];
                     students[i + 1] = temp;

@@ -1,6 +1,7 @@
 package com.marcus.hello.exam;
 
 import com.marcus.hello.exercises.exercise5.SortUtils;
+import com.marcus.hello.model.ComparableStudent;
 import com.marcus.hello.model.Student;
 
 /**
@@ -28,7 +29,7 @@ public class StudentExamScores {
 
     public void reportStudentScores() {
 
-        SortUtils.sortStudents(students);
+
 
         System.out.format("%-12s %-12s %n", "Name", "Score");
         System.out.format("%-12s %-12s %n", "------------", "------");
@@ -42,7 +43,33 @@ public class StudentExamScores {
     public static void main(String[] args) {
 
         StudentExamScores studentExamScores = new StudentExamScores();
+        SortUtils.sortStudents(studentExamScores.students);
         studentExamScores.reportStudentScores();
+
+        // sort by name and report scores
+
+        SortUtils.sortStudents(studentExamScores.students, new ComparableStudent() {
+            @Override
+            public int compareStudent(Student s1, Student s2) {
+                return s1.getName().compareTo(s2.getName());
+
+            }
+        });
+
+        studentExamScores.reportStudentScores();
+
+        // now descending scores
+
+        SortUtils.sortStudents(studentExamScores.students, new ComparableStudent() {
+            @Override
+            public int compareStudent(Student s1, Student s2) {
+                return s1.getScore() < s2.getScore() ? 1 : -1;
+
+            }
+        });
+
+        studentExamScores.reportStudentScores();
+
 
     }
 

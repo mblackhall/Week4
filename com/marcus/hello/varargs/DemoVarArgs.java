@@ -21,6 +21,10 @@ public class DemoVarArgs {
     public static void main(String... args) {
 
         System.out.println(sumInts(5,4,5,7,8,9,8));
+        System.out.println(sumInts());
+        System.out.println(sumInts(new int[]{5,1,3,10}));
+
+
 
         int age =  16;
 
