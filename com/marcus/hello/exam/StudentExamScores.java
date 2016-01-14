@@ -29,8 +29,6 @@ public class StudentExamScores {
 
     public void reportStudentScores() {
 
-
-
         System.out.format("%-12s %-12s %n", "Name", "Score");
         System.out.format("%-12s %-12s %n", "------------", "------");
 
