@@ -20,7 +20,7 @@ public class StudentExamScores {
         Student student5 = new Student("Marcus", 100.0);
         Student student2 = new Student("Tom", 10.0);
         Student student3 = new Student("Fred", 15.5);
-        Student student4 = new Student("Ruud", 14.5);
+        Student student4 = new Student("Ruud", 2.5);
         Student student1 = new Student("John", 5.0);
         students = new Student[]{student1, student2, student3, student4, student5};
 

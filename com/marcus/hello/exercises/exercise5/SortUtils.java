@@ -29,10 +29,10 @@ public class SortUtils {
     private static void sortInts( int[] salary) {
 
         boolean sorted = false;
-        int temp;
+        int i,temp;
         while (!sorted) {
             sorted = true;
-            for (int i = 0; i < salary.length - 1; i++) {
+            for ( i = 0; i < salary.length - 1; i++) {
                 if (salary[i] > salary[i + 1]) {
                     temp = salary[i];
                     salary[i] = salary[i + 1];
@@ -47,12 +47,15 @@ public class SortUtils {
 
     public static void sortStudents(Student[] students){
 
+        assert students != null;
+
         boolean sorted = false;
         int lastButOneIndex = students.length -1;
+        int i;
         Student temp;
         while (!sorted) {
             sorted = true;
-            for (int i = 0; i < lastButOneIndex; i++) {
+            for ( i = 0; i < lastButOneIndex; i++) {
                 if (students[i].getScore() > students[i+1].getScore()) {
                     temp = students[i];
                     students[i] = students[i + 1];
