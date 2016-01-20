@@ -13,6 +13,10 @@ Object o ;
         Student student1 = new Student("fred",10);
         Student student2 = new Student("fred", 10);
 
+        Object o = student1;
+
+
+
         String s1 ;
 
         System.out.println("where did this method come from");
