@@ -24,6 +24,8 @@ import com.marcus.hello.utils.StringUtils;
 
     public static void main(String[] args) {
 
+        Integer.parseInt("aa");
+
         if ( args.length == 0 ){
             System.out.println("Provide strings to reverse");
             System.exit(0);

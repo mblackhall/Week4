@@ -13,13 +13,17 @@ public class ArrayListStudents {
 
     public static void main(String[] args) {
 
-        List students = new ArrayList();
+        List objects = new ArrayList();
+
+
+        List<Student> students = new ArrayList<>();
 
         students.add(new Student("fred",34));
         students.add(new Student("ben",34));
 
 
-        // .... show enhanced for loop
+
+        // .... show enhanced for loopreturn 0;
 
         // now use generic version List<Student>
 
