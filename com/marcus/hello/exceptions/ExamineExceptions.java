@@ -7,7 +7,6 @@ package com.marcus.hello.exceptions;
 public class ExamineExceptions {
 
 
-
     public ExamineExceptions() {
 
     }
@@ -27,6 +26,7 @@ public class ExamineExceptions {
 
 
     public void method3() {
+
 
         int x = 10 / 0; // throws Arithmetic exception
 

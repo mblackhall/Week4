@@ -2,7 +2,7 @@ package com.marcus.hello.exceptions.types;
 
 /**
  * @author marcus
- * This is a check exception
+ * This is a CHECKED exception - you have to catch it !
  */
 public class PostCodeInvalidException extends Exception {
 
