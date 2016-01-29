@@ -6,24 +6,22 @@ package com.marcus.hello.apps;
 
 class Parms {
 
-    public double getTotal() {
+    private double total;
+    private String noStudentsAsString;
+
+    double getTotal() {
         return total;
     }
-
-    public void setTotal(double total) {
+    void setTotal(double total) {
         this.total = total;
     }
 
-    public String getNoStudentsAsString() {
+    String getNoStudentsAsString() {
         return noStudentsAsString;
     }
-
-    public void setNoStudentsAsString(String noStudentsAsString) {
+    void setNoStudentsAsString(String noStudentsAsString) {
         this.noStudentsAsString = noStudentsAsString;
     }
-
-    private double total;
-    private String noStudentsAsString;
 
     Parms(double total, String noStudentsAsString) {
         this.total = total;
@@ -33,18 +31,18 @@ class Parms {
 
 public class ExceptionsOpdracht {
 
+    private static final String CORRECT_RESULT = "Average score of (%5.2f,%s) is %5.2f\n";
+    private static final String INVALID_RESULT = "Average score of (%5.2f,%s) resulted in a  %s\n";
 
     private double calcAverage(double total, String noStudentsAsStr) {
 
+        // note better to use pattern matching first
         int noStudents = Integer.parseInt(noStudentsAsStr);
 
         // result of double / int is a double and it wont abend
-        // therfore I have to throw arithmetic exceptiom myself;
+        // therfore I have to do a trick first
 
-        if (noStudents == 0) {
-            throw new ArithmeticException();
-        }
-
+        int check = 1 / noStudents;
         return total / noStudents;
 
     }
@@ -62,16 +60,10 @@ public class ExceptionsOpdracht {
             try {
 
                 double result = calcAverage(parm.getTotal(), parm.getNoStudentsAsString());
-                System.out.println("Average score of " +
-                        "(" + parm.getTotal() + "," + parm.getNoStudentsAsString() + ") is " + result);
+                System.out.format(CORRECT_RESULT, parm.getTotal(), parm.getNoStudentsAsString(), result);
             } catch (RuntimeException e) {
-                System.out.println("Average score of " +
-                        "(" + parm.getTotal() + "," + parm.getNoStudentsAsString() +
-                        ") resulted in a " + e.getClass().getSimpleName());
-
-
+                System.out.printf(INVALID_RESULT, parm.getTotal(), parm.getNoStudentsAsString(), e.getClass().getSimpleName());
             }
-
         }
 
     }
