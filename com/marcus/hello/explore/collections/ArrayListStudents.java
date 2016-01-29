@@ -20,12 +20,20 @@ public class ArrayListStudents {
 
         students.add(new Student("fred",34));
         students.add(new Student("ben",34));
+        students.add(new Student("maia",80));
+
+
+        students.remove(2);
+
+        students.add(0,new Student("george",50));
 
 
 
         // .... show enhanced for loopreturn 0;
 
-        // now use generic version List<Student>
+        for (Student s : students){
+            System.out.println(s.getName() + " : " + s.getScore());
+        }
 
 
 

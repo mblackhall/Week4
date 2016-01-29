@@ -25,7 +25,7 @@ class Parms {
     private double total;
     private String noStudentsAsString;
 
-    Parms(double total,String noStudentsAsString ){
+    Parms(double total, String noStudentsAsString) {
         this.total = total;
         this.noStudentsAsString = noStudentsAsString;
     }
@@ -34,7 +34,7 @@ class Parms {
 public class ExceptionsOpdracht {
 
 
-    private double calcAverage(double total,String noStudentsAsStr){
+    private double calcAverage(double total, String noStudentsAsStr) {
 
         int noStudents = Integer.parseInt(noStudentsAsStr);
 
@@ -45,30 +45,29 @@ public class ExceptionsOpdracht {
             throw new ArithmeticException();
         }
 
-
         return total / noStudents;
 
     }
 
 
-    private void testAverages(){
+    private void testAverages() {
 
-        Parms[] parms = new Parms[] {new Parms(90,"10"),
-                                      new Parms(90,"0"),
-                                       new Parms(90,"aaa")
+        Parms[] parms = new Parms[]{new Parms(90, "10"),
+                new Parms(90, "0"),
+                new Parms(90, "aaa")
         };
 
-        for(Parms parm: parms ){
+        for (Parms parm : parms) {
 
             try {
 
-               double result = calcAverage(parm.getTotal(), parm.getNoStudentsAsString());
+                double result = calcAverage(parm.getTotal(), parm.getNoStudentsAsString());
                 System.out.println("Average score of " +
-                        "(" + parm.getTotal() + "," + parm.getNoStudentsAsString() + ") is " + result );
-            } catch (RuntimeException e ){
+                        "(" + parm.getTotal() + "," + parm.getNoStudentsAsString() + ") is " + result);
+            } catch (RuntimeException e) {
                 System.out.println("Average score of " +
                         "(" + parm.getTotal() + "," + parm.getNoStudentsAsString() +
-                        ") resulted in a " + e.getClass().getSimpleName() );
+                        ") resulted in a " + e.getClass().getSimpleName());
 
 
             }
@@ -81,4 +80,5 @@ public class ExceptionsOpdracht {
         new ExceptionsOpdracht().testAverages();
 
     }
+
 }
